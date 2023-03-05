@@ -21,20 +21,21 @@
     </style>
 </head>
 <body>
-    <table>
-    <tr>
+    <table id="firstTable">
+   
+     <tr>
         <td> <div id=box></div></td>
        
     </tr>
     <tr>
-        <td> <input type="text"></td>
+        <td> <input type="text" id="textColor" ></td>
     </tr>
 </table>
 <button id="btn1">색변경</button>
 
 <hr>
 
-<table>
+<table id="table2">
     <tr>
         <td> <div id=box></div></td>
         <td> <div id=box></div></td>
@@ -53,7 +54,7 @@
         <td> <input type="text"></td>
     </tr>
 </table>  
-<button>색변경</button>
+<button id="btn2">색변경</button>
 
 <hr>
 
@@ -80,10 +81,20 @@
 
 
 <script>
-    $("btn1").on("click" , () => {
-     console.log("ddd");
+    $("#btn1").on("click", function() {
+     $("#box").css("backgroundColor",($("#textColor").val())).css("transition-duration","1s");
+
+     
 
     });
+    $("#btn2").on("click", function() {
+     $("#box").css("backgroundColor",($("#textColor").val())).css("transition-duration","1s");
+
+     $('#table2').parntsUntil("#box")
+
+    });
+
+
 </script>   
 </body>
 

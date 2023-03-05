@@ -33,7 +33,7 @@ $(document).ready(function (){
     for(let el of arr){
         el.style.backgroundColor = "yellow";
 
-    }
+    };
     //-> 배열에서 요소를 하나씩 꺼내서 적용하는건 가능하나 불편하다!
 
 
@@ -42,7 +42,7 @@ $(document).ready(function (){
 
 
 
-})
+});
 
     </script>
 
@@ -56,7 +56,7 @@ $(document).ready(function (){
     <h1 class="item">test1</h1>
     <h1 class="item select">test2</h1>
     <h1 class="item">test3</h1>
-    <h1 class="item select">test4</h1>
+    <h1 class="select">test4</h1>
 
     <script>
         $(document).ready(function() {
@@ -64,9 +64,9 @@ $(document).ready(function (){
             // 클래스가 itme인 요소의 글자색 orange로 변경
             $(".item").css("color","orange");
             //클래스가 select인 요소의 배경색을 yellowgreen으로 변경
-            $(".select").css("backgraundColor","yellowgreen");
+            $(".select").css("backgroundColor","yellowgreen");
 
-            //클래스를 item,select 를 동시에 돌다 가지고 있는 욧만
+            //클래스를 item,select 를 동시에 돌다 가지고 있는 요소만
             //글자크기를 10px로 변경
             $(".item.select").css("fontSize","10px");
         })
@@ -93,7 +93,7 @@ $("#input1").on("input", function() {
     //input 이벤트 : 입력과 관련된 모든 행위
 
     //1) 작성된 값이 정규 표현식에 맞는 형식인지 검사 
-    if(regExp.test($("#input".val()))) {
+    if(regExp.test($("#input1").val())) {
         //"#input".val() : 아이디가 input1인 요소에 작성된 값(value)을 얻어옴
 
         //2)정규식 결과에 따라 내용 출력
@@ -134,9 +134,9 @@ $("#input1").on("input", function() {
 </div>
 <script>
       $(function() {
-        $("area > h4").css("color","red");
+        $(".area > h4").css("color","red");
 
-        $("area >ul > qqq").css("backgroundColor","tomato");
+        $(".area >ul > .qqq").css("backgroundColor","tomato");
 
         //클래스가 area인 요소의 후손 중
         //클래스가 qqq인 요소의 폰트 크기를 30px로 변경
@@ -147,7 +147,7 @@ $("#input1").on("input", function() {
         //내용이 "사과"인 요소를 선택해서
         //배경 빨강색, 글자는 흰색으로 변경 
 
-        $(".area > ul > h4").css("backgroundColor","red").css("color","white");
+        $(".area > ul > li> h4").css("backgroundColor","red").css("color","white");
 
 
 
@@ -175,20 +175,20 @@ $("#input1").on("input", function() {
 
 </pre>
 성별 :
-<input type="radio" name="gender" id="mele" value="남">
-<label for="mele">남자</label>
+<input type="radio" name="gender" id="male" value="남">
+<label for="male">남자</label>
 
-<input type="radio" name="gender" id="femele" value="여">
-<label for="femele">여자</label>
+<input type="radio" name="gender" id="female" value="여">
+<label for="female">여자</label>
 
 <button type="button" id="check">확인하기</button>
 <script>
-    $("check").on("click", function () {
+    $("#check").on("click", function () {
         // name 속성값이 gender인 요소선택
         //check 된 요소를 선택
 
 
-        const gender = $("input[name 'gender']:checked");
+        const gender = $("input[name ='gender']:checked");
 
         //변수 gender는 javascript방식의 변수이다
         //-> 이후 gneder를 단순하게 호출하게 되면

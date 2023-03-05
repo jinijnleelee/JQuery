@@ -29,26 +29,28 @@
     취미 : 
     <input type="checkbox" name="hobby" value="football">풋볼
     <input type="checkbox" name="hobby" value="game" checked>게임
-    <input type="checkbox" name="hobby" value="fmusic">음악감상
+    <input type="checkbox" name="hobby" value="music">음악감상
 
     <button type="button" id="btn1">확인</button>
 
     <script>
         $("#btn1").on("click",() => {
-            const arr = $("input[name'hobby]");
+            const arr = $("input[name='hobby']");
 
             let str = "";
-            console.log(arr.prop("cchecked"));
+            console.log(arr.prop("checked"));
             //배열명을 적을경우 0번 인덱스만 확인 가능 
             
             for(let i = 0; i< arr.length; i++ ){
                 //각 인덱스에 저장된 checkbox요소가 체크되어있는 상태인지 확인
                 console.log(i + ":" + $(arr[i]).prop("checked"));
 
-                if($(arr[i].prop("checked")){
-                   str+= (arr[i].val() + **
-                })
+                if($(arr[i]).prop("checked")){
+                   str+= $(arr[i]).val() + "";
+                   //체크된 요소의 value값을 얻어와 str변수에 누적 
+                }
             }
+            alert(str);
         });
 
     </script>
