@@ -74,11 +74,13 @@ crossorigin="anonymous"></script>
 
 
 <script>
+
        const style1 = {'border': '2px solid red','color':'red'};
             const style2 = {'border': '2px solid orange','color':'orange'};
             const style3  = {'border': '2px solid yellow','color':'yellow'};
             const style4 = {'border': '2px solid green','color':'green'};
             const style5  = {'border': '2px solid blue','color':'blue'};
+          
         //siblings() : 선택한 요소의 형제 요소를 모두 선택
         //h2 태그의 형제 요소에 스타일로 style1을 설정 
 $('h2').siblings().css(style1);
@@ -111,7 +113,7 @@ console.log($('h2').prevAll().is('p'));
 
  $('span').on("click", function() {
 
-    console.log('span 태그 클릭됨');
+  //  console.log('span 태그 클릭됨');
 
     console.log($(this));
     
@@ -125,7 +127,7 @@ console.log($('h2').prevAll().is('p'));
  });
 
  $('h2').on('click',function() {
-
+   
     //h2태그를 클릭했을때
    //클릭한 요소의 이전요소의
     //배경색을 red,글자색 white로 설정
