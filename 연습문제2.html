@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" 
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
+    crossorigin="anonymous"></script>
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+
+    }
+   input{
+width: 96px;
+   }
+    
+</style>
+</head>
+<body>
+    <table border="1px">
+
+        <tr>
+            <td>
+                <div id="boxs"></div>
+            </td>
+            <td>
+                <div id="boxs"></div>
+            </td> 
+            <td>
+                <div id="boxs"></div>
+            </td>
+             <td>
+                <div id="boxs"></div>
+            </td>
+            <td>
+                <div id="boxs"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="inputs"></div>
+            </td>
+            <td>
+                <input type="text" id="inputs"></div>
+            </td>
+            <td>
+                <input type="text" id="inputs"></div>
+            </td>
+            <td>
+                <input type="text" id="inputs"></div>
+            </td>
+            <td>
+                <input type="text" id="inputss"></div>
+            </td>
+
+
+        </tr>
+        
+       
+
+
+    </table>
+  
+    
+    <button type="button">리셋</button>
+    <script>
+        
+    $(function() {
+     
+   
+    //   $('tr').children('td').children('div').css("color", result);
+   
+
+
+    });
+
+
+    $('div').on('click',function() {
+        const arr =  $('tr').children('td').children('input');
+
+        for(let i = 0; i< arr.length; i++ ){
+
+
+
+        }
+       
+     
+
+    });
+
+
+      
+    </script>
+
+</body>
+</html>
