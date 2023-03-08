@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <button id="btn" onclick="fnCl()"></button>
+    <span></span>
+</div>
+<div>
+    아이디 : <input type="text" id="userid">
+</div>
+<script>
+function fnCl(){
+
+    const btn = document.getElementById("btn");
+    const span = document.querySelector("span");
+    const userid = document.getElementById("userid");
+  
+
+    if(userid.value == ""){
+        console.log("입력부탁");
+    }else{
+        console.log("입");
+    };
+
+};
+
+</script>
+</body>
+</html>
